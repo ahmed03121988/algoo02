@@ -1,0 +1,17 @@
+ALGORITHM algoo
+VAR
+    def insertion_sort(arr):
+    for i in range(1, len(arr)):
+BEGIN
+    # Store the current element in a variable
+        current_element = arr[i]
+        j = i - 1
+        # Compare the current element to the elements in the sorted subarray to its left
+        while j >= 0 and arr[j] > current_element:
+            # Shift elements to the right to make room for the current element
+            arr[j + 1] = arr[j]
+            j -= 1
+        # Insert the current element in the correct position in the sorted subarray
+        arr[j + 1] = current_element
+    return arr
+END
